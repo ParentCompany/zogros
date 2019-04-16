@@ -1,0 +1,144 @@
+
+
+/* Custom CSS */
+
+
+.mdl-grid.center-items {
+	justify-content: center;
+}
+
+i {
+	margin-right: 0.5rem;
+}
+
+.mdl-grid {
+	width: 90vw;
+}
+
+.copyright {
+	padding: 1rem;
+	text-align: center;
+}
+
+
+.center {
+    margin: 3px auto 3px auto;
+    text-align: center; 
+}
+
+/* Resposive iframe */
+
+.resp-container {
+    position: relative;
+    overflow: hidden;
+    padding-top: 56.25%;
+}
+
+.resp-iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* Resposive iframe end */
+
+/* Custom CSS End */
+
+    /* Colors */
+
+    .office-card-square > .mdl-card__title {color: #fff;background-color: #FF5722;}
+    .office-card-square {margin: 1rem;}
+
+    .sharep-card-square > .mdl-card__title {color: #fff;background-color: #03A9F4;}
+    .sharep-card-square {margin: 1rem;}
+
+    .teams-card-square > .mdl-card__title {color: #fff;background-color: #3F51B5;}
+    .teams-card-square {margin: 1rem;}
+
+    .prtg-card-square > .mdl-card__title {color: #fff;background-color: rgb(94, 67, 214);}
+    .prtg-card-square {margin: 1rem;}
+
+    .rates-card-square > .mdl-card__title {color: #fff;background-color: #FBC02D;}
+    .rates-card-square {margin: 1rem;}
+
+    .database-card-square > .mdl-card__title {color: #fff;background-color: #00BCD4;}
+    .database-card-square {margin: 1rem;}
+
+    .whmcsm-card-square > .mdl-card__title {color: #fff;background-color: #4CAF50;}
+    .whmcsm-card-square {margin: 1rem;}
+
+    .ipam-card-square > .mdl-card__title {color: #fff;background-color: #db6d65;}
+    .ipam-card-square {margin: 1rem;}
+
+    .sip-card-square > .mdl-card__title {color: #fff;background-color: rgb(255, 81, 81);}
+    .sip-card-square {margin: 1rem;}
+
+    .whmcsc-card-square > .mdl-card__title {color: #fff;background-color: rgb(66, 189, 168);}
+    .whmcsc-card-square {margin: 1rem;}
+
+    .devcip-card-square > .mdl-card__title {color: #fff;background-color: #FF5722;}
+    .devcip-card-square {margin: 1rem;}
+
+    .devmor-card-square > .mdl-card__title {color: #fff;background-color: #8BC34A;}
+    .devmor-card-square {margin: 1rem;}
+
+    .fresh-card-square > .mdl-card__title {color: #fff;background-color: #FF9800;}
+    .fresh-card-square {margin: 1rem;}
+
+    .facebookc-card-square > .mdl-card__title {color: #fff;background-color: #3B5998;}
+    .facebookc-card-square {margin: 1rem;}
+
+    .linkedinc-card-square > .mdl-card__title {color: #fff;background-color: #0077B5;}
+    .linkedinc-card-square {margin: 1rem;}
+
+    .twitterc-card-square > .mdl-card__title {color: #fff;background-color: #0084B4;}
+    .twitterc-card-square {margin: 1rem;}
+
+    .youtubec-card-square > .mdl-card__title {color: #fff;background-color: #FF0000;}
+    .youtubec-card-square {margin: 1rem;}
+
+    .facebookm-card-square > .mdl-card__title {color: #fff;background-color: #3B5998;}
+    .facebookm-card-square {margin: 1rem;}
+
+    .linkedinm-card-square > .mdl-card__title {color: #fff;background-color: #0077B5;}
+    .linkedinm-card-square {margin: 1rem;}
+
+    .twitterm-card-square > .mdl-card__title {color: #fff;background-color: #0084B4;}
+    .twitterm-card-square {margin: 1rem;}
+
+    .youtubem-card-square > .mdl-card__title {color: #fff;background-color: #FF0000;}
+    .youtubem-card-square {margin: 1rem;}
+
+    .weather-card-square > .mdl-card__title {color: #fff;background-color: #FF0000;}
+    .weather-card-square {margin: 1rem;}
+
+
+     /* Colors End */
+
+     /* Tab click */
+
+     .tab1 { padding-left: 1em; }
+     .tab2 { padding-left: 4em; }
+     .tab3 { padding-left: 10em; }
+     .tab4 { padding-left: 16em; }
+     .tab5 { padding-left: 20em; }
+     .tab6 { padding-left: 24em; }
+     .tab7 { padding-left: 28em; }
+     .tab8 { padding-left: 32em; }
+     .tab9 { padding-left: 36em; }
+     .tab10 { padding-left: 40em; }
+     .tab11 { padding-left: 44em; }
+     .tab12 { padding-left: 48em; }
+     .tab13 { padding-left: 52em; }
+     .tab14 { padding-left: 56em; }
+     .tab15 { padding-left: 60em; }
+     .tab16 { padding-left: 64em; }
+
+     /* end Tab click */
+
+     .mdl-card {
+         border-radius: 10px;
+     }

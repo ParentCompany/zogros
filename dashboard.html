@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="tokencheck.js"></script>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta-data android:name="android.max_aspect" android:value="2.1" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="icon.png">
+    <link rel="stylesheet" href="mdl/material.min.css">
+    <script src="mdl/material.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
+    <script src="https://npmcdn.com/js-alert/dist/jsalert.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    
+    <title>Ciptex</title>
+</head>
+
+<body onload="startTime()"> 
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header mdl-layout--fixed-tabs">
+        <header class="mdl-layout__header">
+            <div class="mdl-layout__header-row">
+                <!-- Title -->
+                <span class="mdl-layout-title">Ciptex</span>
+                <div class="mdl-layout-spacer"></div>
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable
+						mdl-textfield--floating-label mdl-textfield--align-right">
+                    <div  id="clock">
+                    </div>
+                </div>
+            </div>
+            <!-- Tabs -->
+            <div class="mdl-layout__tab-bar mdl-js-ripple-effect">
+                <a href="#fixed-tab-1" class="mdl-layout__tab is-active">Home</a>
+                <a href="#fixed-tab-2" class="mdl-layout__tab">Social</a>
+                <a href="#fixed-tab-3" class="mdl-layout__tab">Essential</a>
+                <!-- <a href="#fixed-tab-4" class="mdl-layout__tab">Chat</a> -->
+                <a href="#fixed-tab-5" class="mdl-layout__tab">About</a>
+            </div>
+        </header>
+        <div class="mdl-layout__drawer">
+               <span class="mdl-layout-title"><a style="color:gray" href="dashboard.html"><i class="fas fa-arrow-left"></i></a> Back</span>
+            <nav class="mdl-navigation">
+                <a class="mdl-navigation__link" href="mailto:sina.taavon@ciptex.com?subject=Dashboard">Email Sina</a>
+                <a class="mdl-navigation__link" href="mailto:elizabeth.jenkins@ciptex.com?subject=Dashboard">Email Liz</a>
+                <a class="mdl-navigation__link" href="mailto:matthew.duggan@ciptex.com?subject=Dashboard">Email Matthew</a>
+                <a class="mdl-navigation__link" href="mailto:johny.martins@ciptex.com?subject=Dashboard">Email Johny</a>
+                <br>
+				<button onclick="logout()" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect"><i class="fas fa-sign-out-alt"></i>Log out</button>
+            </nav>
+        </div>
+        <main class="mdl-layout__content">
+            <section class="mdl-layout__tab-panel is-active" id="fixed-tab-1">
+                <div id="dash-content" class="page-content">
+                    <br>
+                        <div class="mdl-grid">
+                                <div class="mdl-cell mdl-cell--12-col center"> <div class="mdl-card__supporting-text"><i style="color:#FF5722" class="fas fa-circle"></i>Finance <i style="color:#03A9F4" class="fas fa-circle tab1"></i>Sales <i style="color:#8BC34A" class="fas fa-circle tab1"></i>Support <i style="color:rgb(66, 189, 168)" class="fas fa-circle tab1"></i>Monitoring <i style="color:#FBC02D" class="fas fa-circle tab1"></i>Dev Platforms <i style="color:rgb(94, 67, 214)" class="fas fa-circle tab1"></i>Other (Misc)</div>
+                              </div>
+                    <div class="mdl-grid center-items">
+                              <!-- Rates Admin card -->
+                              <div class="office-card-square mdl-card mdl-shadow--2dp">
+                                    <div class="mdl-card__title mdl-card--expand">
+                                        <h2 class="mdl-card__title-text">  <i class="material-icons">money</i>Rates</h2>
+                                    </div>
+                                    <div class="mdl-card__supporting-text">
+                                        Rates Admin. (A2 Billing)
+                                    </div>
+                                    <div class="mdl-card__actions mdl-card--border">
+                                        <a href="https://ratesadmin.squad.ciptex.net/admin" target="_blank" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+                                            Open Rates
+                                            </a>
+                                    </div>
+                                </div>
+                                <!-- Rates Admin card -->
+                                <!-- WHMCS c card -->
+                        <div class="sharep-card-square mdl-card mdl-shadow--2dp">
+                                <div class="mdl-card__title mdl-card--expand">
+                                    <h2 class="mdl-card__title-text">  <i class="material-icons">group</i>WHMCS Ciptex</h2>
+                                </div>
+                                <div class="mdl-card__supporting-text">
+                                    WHMCS for Ciptex. (Moretalk Instance)
+                                </div>
+                                <div class="mdl-card__actions mdl-card--border">
+                                    <a href="https://whmcs-moretalk.squad.ciptex.net/admin" target="_blank" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+                                        Open WHMCS Ciptex
+                                        </a>
+                                </div>
+                            </div>
+                            <!-- WHMCS c card -->
+                             <!-- Sip  card -->
+                        <div class="devmor-card-square mdl-card mdl-shadow--2dp">
+                                <div class="mdl-card__title mdl-card--expand">
+                                    <h2 class="mdl-card__title-text">  <i class="material-icons">camera</i>SIP Capture</h2>
+                                </div>
+                                <div class="mdl-card__supporting-text">
+                                    SIP Monitoring tool.
+                                </div>
+                                <div class="mdl-card__actions mdl-card--border">
+                                    <a href="https://sipcapture.squad.ciptex.net" target="_blank" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+                                        Open SIP Capture
+                                        </a>
+                                </div>
+                            </div>
+                            <!-- Sip card -->
+                            <!-- Database Admin card -->
+                        <div class="devmor-card-square mdl-card mdl-shadow--2dp">
+                                <div class="mdl-card__title mdl-card--expand">
+                                    <h2 class="mdl-card__title-text">  <i class="material-icons">search</i>Database</h2>
+                                </div>
+                                <div class="mdl-card__supporting-text">
+                                    Database Admin (myPHP).
+                                </div>
+                                <div class="mdl-card__actions mdl-card--border">
+                                    <a href="https://dbadmin.squad.ciptex.net" target="_blank" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+                                        Open Database 
+                                        </a>
+                                </div>
+                            </div>
+                            <!-- Database Admin card -->
+                             <!-- Freshdesk card -->
+                        <div class="devmor-card-square mdl-card mdl-shadow--2dp">
+                                <div class="mdl-card__title mdl-card--expand">
+                                    <h2 class="mdl-card__title-text">  <i class="material-icons">notification_important</i>Freshdesk</h2>
+                                </div>
+                                <div class="mdl-card__supporting-text">
+                                    Freshdesk Ticketing Solution.
+                                </div>
+                                <div class="mdl-card__actions mdl-card--border">
+                                    <a href="https://ciptex.freshdesk.com/helpdesk/dashboard?view=standard" target="_blank" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+                                        Open Freshdesk
+                                        </a>
+                                </div>
+                            </div>
+                            <!-- Freshdesk card -->
+                            <!-- IPAM card -->
+                        <div class="devmor-card-square mdl-card mdl-shadow--2dp">
+                                <div class="mdl-card__title mdl-card--expand">
+                                    <h2 class="mdl-card__title-text">  <i class="material-icons">device_hub</i>IPAM Ciptex</h2>
+                                </div>
+                                <div class="mdl-card__supporting-text">
+                                    IP Searching tool.
+                                </div>
+                                <div class="mdl-card__actions mdl-card--border">
+                                    <a href="https://ipam.squad.ciptex.net" target="_blank" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+                                        Open IPAM
+                                        </a>
+                                </div>
+                            </div>
+                            <!-- IPAM card -->
+                            <!-- PRTG card -->
+                        <div class="whmcsc-card-square mdl-card mdl-shadow--2dp">
+                                <div class="mdl-card__title mdl-card--expand">
+                                    <h2 class="mdl-card__title-text">  <i class="material-icons">aspect_ratio</i>PRTG</h2>
+                                </div>
+                                <div class="mdl-card__supporting-text">
+                                    PRTG Monitoring Solution (Monitoring Dashboard)
+                                </div>
+                                <div class="mdl-card__actions mdl-card--border">
+                                    <a href="https://prtg.squad.ciptex.net" target="_blank" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+                                        Open PRTG
+                                        </a>
+                                </div>
+                            </div>
+                            <!-- PRTG card -->
+                            <!-- Gecko Board card -->
+                        <div class="whmcsc-card-square mdl-card mdl-shadow--2dp">
+                                <div class="mdl-card__title mdl-card--expand">
+                                    <h2 class="mdl-card__title-text">  <i class="material-icons">web</i>Gecko Board Dashboard</h2>
+                                </div>
+                                <div class="mdl-card__supporting-text">
+                                    Gecko Board Dashboard (Monitoring Dashbaord).
+                                </div>
+                                <div class="mdl-card__actions mdl-card--border">
+                                    <a href="https://share.geckoboard.com/dashboards/68BFB70DDB876CAA" target="_blank" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+                                        Open Gecko Board
+                                        </a>
+                                </div>
+                            </div>
+                            <!-- Gecko Board card -->
+                             <!-- WHMCS m card -->
+                        <div class="rates-card-square mdl-card mdl-shadow--2dp">
+                                <div class="mdl-card__title mdl-card--expand">
+                                    <h2 class="mdl-card__title-text">  <i class="material-icons">person</i>WHMCS Ciptex (beta)</h2>
+                                </div>
+                                <div class="mdl-card__supporting-text">
+                                    WHMCS for Ciptex (beta).
+                                </div>
+                                <div class="mdl-card__actions mdl-card--border">
+                                    <a href="https://whmcs-ciptex.squad.ciptex.net/admin" target="_blank" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+                                        Open WHMCS Ciptex (beta)
+                                        </a>
+                                </div>
+                            </div>
+                            <!-- WHMCS m card -->
+                            <!-- Dev Cip card -->
+                        <div class="rates-card-square mdl-card mdl-shadow--2dp">
+                                <div class="mdl-card__title mdl-card--expand">
+                                    <h2 class="mdl-card__title-text">  <i class="material-icons">web</i>Dev Ciptex</h2>
+                                </div>
+                                <div class="mdl-card__supporting-text">
+                                    Ciptex Development Website.
+                                </div>
+                                <div class="mdl-card__actions mdl-card--border">
+                                    <a href="https://d3l31s3ya09i6f.cloudfront.net" target="_blank" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+                                        Open Ciptex Dev
+                                        </a>
+                                </div>
+                            </div>
+                            <!-- Dev Cip card -->
+                            <!-- Dev Mor card -->
+                            <div class="rates-card-square mdl-card mdl-shadow--2dp">
+                                <div class="mdl-card__title mdl-card--expand">
+                                    <h2 class="mdl-card__title-text">  <i class="material-icons">web</i>Dev Moretalk</h2>
+                                </div>
+                                <div class="mdl-card__supporting-text">
+                                    Moretalk Development Website.
+                                </div>
+                                <div class="mdl-card__actions mdl-card--border">
+                                    <a href="https://d27ha2q2ve6l5x.cloudfront.net" target="_blank" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+                                        Open Moretalk Dev
+                                        </a>
+                                </div>
+                            </div>
+                            <!-- Dev Mor card -->
+                        <!-- Office 365 card -->
+                        <div class="prtg-card-square mdl-card mdl-shadow--2dp">
+                            <div class="mdl-card__title mdl-card--expand">
+                                <h2 class="mdl-card__title-text">  <i class="material-icons">book</i>Office 365</h2>
+                            </div>
+                            <div class="mdl-card__supporting-text">
+                                Office 365 Hub.
+                            </div>
+                            <div class="mdl-card__actions mdl-card--border">
+                                <a href="https://login.microsoftonline.com/" target="_blank" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+									Open Office 365
+									</a>
+                            </div>
+                        </div>
+                        <!-- Office 365 card -->
+                        <!-- Sharepoint card -->
+                        <div class="prtg-card-square mdl-card mdl-shadow--2dp">
+                            <div class="mdl-card__title mdl-card--expand">
+                                <h2 class="mdl-card__title-text">  <i class="material-icons">folder</i>Sharepoint CC</h2>
+                            </div>
+                            <div class="mdl-card__supporting-text">
+                                Sharepoint Ciptex Companywide.
+                            </div>
+                            <div class="mdl-card__actions mdl-card--border">
+                                <a href="https://ciptex365.sharepoint.com/sites/CiptexCompanywideFileStore/Shared%20Documents/Forms/AllItems.aspx" target="_blank" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+									Open Sharepoint
+									</a>
+                            </div>
+                        </div>
+                        <!-- Sharepoint card -->
+                        <!-- Teams card -->
+                        <div class="prtg-card-square mdl-card mdl-shadow--2dp">
+                            <div class="mdl-card__title mdl-card--expand">
+                                <h2 class="mdl-card__title-text">  <i class="material-icons">group</i>Teams</h2>
+                            </div>
+                            <div class="mdl-card__supporting-text">
+                                Teams Online (browser-based).
+                            </div>
+                            <div class="mdl-card__actions mdl-card--border">
+                                <a href="https://teams.microsoft.com" target="_blank" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+									Open Teams
+									</a>
+                            </div>
+                        </div>
+                        <!-- Teams card -->
+                        
+                        
+                  
+                       
+                        
+                       
+                        
+                        
+                       
+						
+						
+                    </div>
+                </div>
+            </section>
+            <section class="mdl-layout__tab-panel" id="fixed-tab-2">
+                <div id="social-content" class="page-content">
+                    <div class="mdl-grid center-items">
+                        <!-- FB card -->
+                        <div class="facebookc-card-square mdl-card mdl-shadow--2dp">
+                            <div class="mdl-card__title mdl-card--expand">
+                                <h2 class="mdl-card__title-text"><i class="fab fa-facebook"></i>Ciptex Facebook</h2>
+                            </div>
+                            <div class="mdl-card__supporting-text">
+                                Ciptex Facebook Page.
+                            </div>
+                            <div class="mdl-card__actions mdl-card--border">
+                                <a href="https://www.facebook.com/ciptex/" target="_blank" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+									Open Ciptex Facebook
+									</a>
+                            </div>
+                        </div>
+                        <!-- FB card -->
+                        <!-- LinkedIn card -->
+                        <div class="linkedinc-card-square mdl-card mdl-shadow--2dp">
+                            <div class="mdl-card__title mdl-card--expand">
+                                <h2 class="mdl-card__title-text"><i class="fab fa-linkedin"></i>Ciptex linkedIn</h2>
+                            </div>
+                            <div class="mdl-card__supporting-text">
+                                Ciptex LinkedIn Page.
+                            </div>
+                            <div class="mdl-card__actions mdl-card--border">
+                                <a href="https://www.linkedin.com/company/2226645/" target="_blank" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+									Open Ciptex LinkedIn
+									</a>
+                            </div>
+                        </div>
+                        <!-- LinkedIn card -->
+                        <!-- Twitter card -->
+                        <div class="twitterc-card-square mdl-card mdl-shadow--2dp">
+                            <div class="mdl-card__title mdl-card--expand">
+                                <h2 class="mdl-card__title-text">  <i class="fab fa-twitter"></i>Ciptex Twitter</h2>
+                            </div>
+                            <div class="mdl-card__supporting-text">
+                                Ciptex Twitter Page.
+                            </div>
+                            <div class="mdl-card__actions mdl-card--border">
+                                <a href="https://twitter.com/ciptex" target="_blank" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+									Open Ciptex Twitter
+									</a>
+                            </div>
+                        </div>
+                        <!-- Twitter card -->
+                        <!-- Youtube card -->
+                        <div class="youtubec-card-square mdl-card mdl-shadow--2dp">
+                            <div class="mdl-card__title mdl-card--expand">
+                                <h2 class="mdl-card__title-text">  <i class="fab fa-youtube"></i>Ciptex Youtube</h2>
+                            </div>
+                            <div class="mdl-card__supporting-text">
+                                Ciptex Youtube Page.
+                            </div>
+                            <div class="mdl-card__actions mdl-card--border">
+                                <a href="https://www.youtube.com/channel/UC8puyBCaT5tomGyMcnlbmsA" target="_blank" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+									Open Ciptex Youtube
+									</a>
+                            </div>
+                        </div>
+                        <!-- Youtube card -->
+                        <!-- FB card -->
+                        <div class="facebookm-card-square mdl-card mdl-shadow--2dp">
+                            <div class="mdl-card__title mdl-card--expand">
+                                <h2 class="mdl-card__title-text"><i class="fab fa-facebook"></i>Moretalk Facebook</h2>
+                            </div>
+                            <div class="mdl-card__supporting-text">
+                                Moretalk Facebook Page.
+                            </div>
+                            <div class="mdl-card__actions mdl-card--border">
+                                <a href="https://www.facebook.com/moretalkuk/" target="_blank" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+									Open Moretalk Facebook
+									</a>
+                            </div>
+                        </div>
+                        <!-- FB card -->
+                        <!-- LinkedIn card -->
+                        <div class="linkedinm-card-square mdl-card mdl-shadow--2dp">
+                            <div class="mdl-card__title mdl-card--expand">
+                                <h2 class="mdl-card__title-text"><i class="fab fa-linkedin"></i>Moretalk linkedIn</h2>
+                            </div>
+                            <div class="mdl-card__supporting-text">
+                                Moretalk LinkedIn Page.
+                            </div>
+                            <div class="mdl-card__actions mdl-card--border">
+                                <a href="https://www.linkedin.com/company/2621863/" target="_blank" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+									Open Moretalk LinkedIn
+									</a>
+                            </div>
+                        </div>
+                        <!-- LinkedIn card -->
+                        <!-- Twitter card -->
+                        <div class="twitterm-card-square mdl-card mdl-shadow--2dp">
+                            <div class="mdl-card__title mdl-card--expand">
+                                <h2 class="mdl-card__title-text">  <i class="fab fa-twitter"></i>Moretalk Twitter</h2>
+                            </div>
+                            <div class="mdl-card__supporting-text">
+                                Moretalk Twitter Page.
+                            </div>
+                            <div class="mdl-card__actions mdl-card--border">
+                                <a href="https://twitter.com/moretalkuk" target="_blank" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+									Open Moretalk Twitter
+									</a>
+                            </div>
+                        </div>
+                        <!-- Twitter card -->
+                        <!-- Youtube card -->
+                        <div class="youtubem-card-square mdl-card mdl-shadow--2dp">
+                            <div class="mdl-card__title mdl-card--expand">
+                                <h2 class="mdl-card__title-text">  <i class="fab fa-youtube"></i>Moretalk Youtube</h2>
+                            </div>
+                            <div class="mdl-card__supporting-text">
+                                Moretalk Youtube Page.
+                            </div>
+                            <div class="mdl-card__actions mdl-card--border">
+                                <a href="https://www.youtube.com/channel/UCwkilI9hih6xQ_bZBRE0r8w" target="_blank" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+									Open Moretalk Youtube
+									</a>
+                            </div>
+                        </div>
+						<!-- Youtube card -->
+						<!-- Ciptex Blog card -->
+                        <div class="whmcsm-card-square mdl-card mdl-shadow--2dp">
+                            <div class="mdl-card__title mdl-card--expand">
+                                <h2 class="mdl-card__title-text">  <i class="material-icons">web</i>Ciptex Blog</h2>
+                            </div>
+                            <div class="mdl-card__supporting-text">
+                                Ciptex Blog by Medium.
+                            </div>
+                            <div class="mdl-card__actions mdl-card--border">
+                                <a href="https://blog.ciptex.com/" target="_blank" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+									Open Ciptex Blog
+									</a>
+                            </div>
+                        </div>
+						<!-- Ciptex Blog card -->
+                    </div>
+                </div>
+            </section>
+            <section class="mdl-layout__tab-panel" id="fixed-tab-3">
+                <div class="page-content">
+                    <div class="mdl-grid center-items">
+                        <div class="youtubem-card-square mdl-card mdl-shadow--2dp">
+                            <a class="weatherwidget-io" href="https://forecast7.com/en/53d48n2d24/manchester/" data-label_1="MANCHESTER" data-label_2="WEATHER" data-font="Roboto" data-icons="Climacons Animated" data-days="3" data-theme="weather_one">MANCHESTER WEATHER</a>
+                            <script>
+                                ! function(d, s, id) {
+                                    var js, fjs = d.getElementsByTagName(s)[0];
+                                    if (!d.getElementById(id)) {
+                                        js = d.createElement(s);
+                                        js.id = id;
+                                        js.src = 'https://weatherwidget.io/js/widget.min.js';
+                                        fjs.parentNode.insertBefore(js, fjs);
+                                    }
+                                }(document, 'script', 'weatherwidget-io-js');
+                            </script>
+
+                        </div>
+
+                        <div class="youtubem-card-square mdl-card mdl-shadow--2dp">
+                            <a class="weatherwidget-io" href="https://forecast7.com/en/51d37n0d46/weybridge/" data-label_1="WEYBRIDGE" data-label_2="WEATHER" data-font="Roboto" data-icons="Climacons Animated" data-days="3" data-theme="weather_one">WEYBRIDGE WEATHER</a>
+                            <script>
+                                ! function(d, s, id) {
+                                    var js, fjs = d.getElementsByTagName(s)[0];
+                                    if (!d.getElementById(id)) {
+                                        js = d.createElement(s);
+                                        js.id = id;
+                                        js.src = 'https://weatherwidget.io/js/widget.min.js';
+                                        fjs.parentNode.insertBefore(js, fjs);
+                                    }
+                                }(document, 'script', 'weatherwidget-io-js');
+                            </script>
+
+						</div>
+						
+						<div class="sharep-card-square mdl-card mdl-shadow--2dp">
+                            <div class="mdl-card__title mdl-card--expand">
+                                <h2 class="mdl-card__title-text">  <i class="material-icons">phone</i>Ciptex Phone Book</h2>
+                            </div>
+                            <div class="mdl-card__supporting-text">
+                                Phone Book Excel on Sharepoint.
+                            </div>
+                            <div class="mdl-card__actions mdl-card--border">
+                                <a href="https://ciptex365.sharepoint.com/:x:/r/sites/CiptexCompanywideFileStore/_layouts/15/Doc.aspx?sourcedoc=%7B2f891e52-7ef3-4cff-9c42-b8299f30c740%7D&action=default&uid=%7B2F891E52-7EF3-4CFF-9C42-B8299F30C740%7D&ListItemId=3776&ListId=%7BE9C21601-8439-4903-855C-61B11E5C4B5C%7D&odsp=1&env=prod" target="_blank" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+									Open Phone Book
+									</a>
+                            </div>
+                        </div>
+
+                        <!-- Apollo -->
+                        <div class="devmor-card-square mdl-card mdl-shadow--2dp">
+                                <div class="mdl-card__title mdl-card--expand">
+                                    <h2 class="mdl-card__title-text">  <i class="material-icons">phone</i>Apollo</h2>
+                                </div>
+                                <div class="mdl-card__supporting-text">
+                                    Apollo Portal for Ciptex.
+                                </div>
+                                <div class="mdl-card__actions mdl-card--border">
+                                    <a href="https://portal.ciptex.com/" target="_blank" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+                                        Open Apollo
+                                        </a>
+                                </div>
+                            </div>
+                        <!-- end Apollo -->
+                          <!-- Hermes New -->
+                          <div class="sip-card-square mdl-card mdl-shadow--2dp">
+                                <div class="mdl-card__title mdl-card--expand">
+                                    <h2 class="mdl-card__title-text">  <i class="material-icons">headset</i>Hermes New</h2>
+                                </div>
+                                <div class="mdl-card__supporting-text">
+                                    Hermes New (The CC platform).
+                                </div>
+                                <div class="mdl-card__actions mdl-card--border">
+                                    <a href="https://app.hermescc.net/hermes_net_v5/admin/launcher/default.aspx" target="_blank" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+                                        Open Hermes
+                                        </a>
+                                </div>
+                            </div>
+                        <!-- end Hermes new -->
+                            <!-- Hermes old -->
+                            <div class="ipam-card-square mdl-card mdl-shadow--2dp">
+                                    <div class="mdl-card__title mdl-card--expand">
+                                        <h2 class="mdl-card__title-text">  <i class="material-icons">headset</i>Hermes Old</h2>
+                                    </div>
+                                    <div class="mdl-card__supporting-text">
+                                        Hermes Old (The VC platform).
+                                    </div>
+                                    <div class="mdl-card__actions mdl-card--border">
+                                        <a href="http://vc-adm-cluster.ciptex.net/hermes_net_v5/admin/launcher/launcher.aspx" target="_blank" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+                                            Open Hermes
+                                            </a>
+                                    </div>
+                                </div>
+                            <!-- end Hermes old -->
+                               <!-- Hermes old -->
+                               <div class="rates-card-square mdl-card mdl-shadow--2dp">
+                                    <div class="mdl-card__title mdl-card--expand">
+                                        <h2 class="mdl-card__title-text">  <i class="material-icons">headset</i>Free PBX</h2>
+                                    </div>
+                                    <div class="mdl-card__supporting-text">
+                                        Apollo Portal (Free PBX).
+                                    </div>
+                                    <div class="mdl-card__actions mdl-card--border">
+                                        <a href="https://ciptex.apolloportal.net/admin/config.php" target="_blank" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+                                            Open Free PBX
+                                            </a>
+                                    </div>
+                                </div>
+                            <!-- end Hermes old -->
+                    </div>
+                </div>
+            </section>
+            <section class="mdl-layout__tab-panel" id="fixed-tab-4">
+                <div class="page-content">
+                    <iframe src="https://outlook.live.com/mail/inbox" frameborder="0"></iframe>
+                </div>
+            </section>
+            <section class="mdl-layout__tab-panel" id="fixed-tab-5">
+                <div class="page-content">
+                    <div class="mdl-grid center-items">
+                        <div class="youtubem-card-square mdl-card mdl-shadow--2dp">
+                            <div class="copyright">
+                                <p>&copy; Ciptex Ltd 2018</p>
+                                <p>Ciptex Ltd. Abbey House, Wellington Way, Brooklands Business Park, Weybridge, Surrey KT13 0TT, UK</p>
+                                <p>0345 8800 808</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <div class="black-bar"></div>
+</body>
+<script src="script.js"></script>
+<script src="js.js"></script>
+
+</html>
