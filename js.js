@@ -1,19 +1,5 @@
 
 
-
-function login1(token) {
-    if(sessionStorage.access_token !== null && sessionStorage.access_token !== undefined && sessionStorage.access_token !== "") {
-        var token = JSON.parse(sessionStorage.access_token);
-        if(token.access_token !== null && token.access_token !== undefined && token.access_token !== "") {
-            document.location.href = '/dashboard.html';
-        }
-        else
-        {
-            
-        }
-    }
-}
-
 function alertlogin() {
 
     JSAlert.alert("Wrong Username or Password").dismissIn(100 * 10);
@@ -28,7 +14,7 @@ function logout() {
             return;
         
         // User pressed yes!
-        document.location.href = '../index.html';
+        document.location.href = 'https://parentcompany.github.io/ZOGROS/index.html';
      
     });
     
