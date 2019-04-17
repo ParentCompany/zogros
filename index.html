@@ -7,13 +7,26 @@
     <link rel="stylesheet" href="mdl/css/fontawesome-all.min.css">
     <link rel="stylesheet" href="mdl/css/style.css">
     <script src="https://npmcdn.com/js-alert/dist/jsalert.min.js"></script>
-    <link rel="icon" href="icon.png">
-    <title>Ciptex Dashboard</title>
+    <link rel="icon" href="mdl/images/icon.png">
+    <title>ZOGROS Dashboard</title>
+    <script src="https://cdn.auth0.com/js/lock/11.14/lock.min.js"></script>
+    <script type="text/javascript">
+      function login() {
+        var lock = new Auth0LockPasswordless('4jHirPiIpco40Pnf5RhiV1FSxd656taq', 'zogros.auth0.com', {
+          passwordlessMethod: "code",              // Sets Lock to use magic link
+          auth: {
+            redirectUrl: 'https://parentcompany.github.io/ZOGROS/dashboard.html',
+            responseType: 'code'
+          }
+        });
+        
+        lock.show();
+      }
+    </script>
 </head>
 <body>
     <div class="form-body" class="container-fluid">
         <div class="website-logo">
-            
                 <div class="logo">
                     <img class="logo-size" src="mdl/images/zogros-logo.svg" alt="">
                 </div>
@@ -24,7 +37,7 @@
                 <div class="bg"></div>
                 <div class="info-holder">
                     <h3>Welcome to ZOGROS Dashboard</h3>
-                    <p>Just test me if i need to fix something.</p>
+                    <p>Just test me if I need to fix something.</p>
                 </div>
             </div>
             <div class="form-holder">
@@ -33,11 +46,11 @@
                         <div class="page-links">
                             <a class="active">Login</a>
                         </div>
-                        <form name="login-form" id="login-form" action="javascript:" onsubmit="token()" >
-                            <input class="form-control"  type="text" name="username" placeholder="E-mail Address"  id="email">
-                            <input class="form-control" type="password" name="password" placeholder="Password"  id="password">
+                        <form name="login-form" id="login-form" action="javascript:"  >
+                            <input class="form-control" disabled  type="text" name="username" placeholder="E-mail Address"  id="email">
+                            <input class="form-control" disabled type="password" name="password" placeholder="Password"  id="password">
                             <span class="form-button">
-                                <button  type="submit" form="login-form" onclick="token()" onkeypress="" class="ibtn">Login</button>
+                                <button  type="submit" form="login-form" onclick="login()" id="btn-login" class="ibtn">Login</button>
                             </span>
                         </form>
                     </div>
@@ -45,6 +58,22 @@
             </div>
         </div>
     </div>
+
+    <!-- index.html -->
+
+    
+   
+
+  
+    <main class="container">
+      <!-- home view -->
+      <div id="home-view">
+        <h4></h4>
+      </div>
+      
+    </main>
+  
+  </div>
 
 
 
